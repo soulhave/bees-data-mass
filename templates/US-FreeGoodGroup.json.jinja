@@ -1,0 +1,3 @@
+{% for freeGoodGroup in freeGoodGroups %}
+{ "_id" : "FREE_GOOD_GROUP_GEN_{{freeGoodGroup.id}}-{{freeGoodGroup.wholesaler}}", "createAt" : {{freeGoodGroup.dateFull}}, "deleted" : false, "skus" : ["{{freeGoodGroup.skuIds}}"], "updateAt" : {{freeGoodGroup.dateFull}} }
+{%- endfor %}

@@ -1,0 +1,3 @@
+{% for skuGroup in skuGroups %}
+{ "_id" : "SKU_GROUP_GEN_{{skuGroup.id}}-{{skuGroup.wholesaler}}", "createAt" : {{skuGroup.dateFull}}, "deleted" : false, "skus" : ["{{skuGroup.skuIds}}"], "updateAt" : {{skuGroup.dateFull}} }
+{%- endfor %}

@@ -1,0 +1,3 @@
+{% for promotion in promotions %}
+{ "_id" : "PROMO_GEN_{{promotion.id}}-{{promotion.wholesaler}}", "accountGroups" : ["{{promotion.accountGroupIds}}"], "createAt" : {{promotion.dateFull}}, "deleted" : false, "description" : "PROMOTION DATA MASS {{promotion.id}} #{{promotion.wholesaler}}", "endDate" : {{promotion.datePlusOneYear}}, {% if 'freeGoodGroupIds' in promotion %}"freeGoodGroups" : ["{{promotion.freeGoodGroupIds}}"],{% else %}"freeGoodGroups" : [],{% endif %} "promotionType" : "{{promotion.type}}", "promotionsRanking" : 1, {% if 'skuGroupIds' in promotion %}"skuGroups" : ["{{promotion.skuGroupIds}}"],{% else %}"skuGroups" : [],{% endif %} "startDate" : {{promotion.dateFull}}, "title" : "PROMOTION", "updateAt" : {{promotion.dateFull}} }
+{%- endfor %}

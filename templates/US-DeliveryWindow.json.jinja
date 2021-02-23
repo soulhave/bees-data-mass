@@ -1,0 +1,3 @@
+{% for deliveryWindow in deliveryWindows %}
+{ "_id" : "DW_GEN_{{deliveryWindow.id}}-{{deliveryWindow.wholesaler}}", "alternative" : false, "country" : "US", "deleted" : false, "deliveryScheduleId" : "ACC_GEN_{{deliveryWindow.accountId}}-{{deliveryWindow.wholesaler}}", "endDate" : "2021-02-17T00:00:00.000Z", "expirationDate" : "2021-02-17T23:09:37.000Z", "startDate" : "2021-02-17T00:00:00.000Z", "updatedAt" : "{{deliveryWindow.updatedTime}}T23:09:38.361Z" }
+{%- endfor %}

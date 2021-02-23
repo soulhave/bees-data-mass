@@ -1,0 +1,3 @@
+{% for accountGroup in accountGroups %}
+{ "_id" : "ACC_GROUP_GEN_{{accountGroup.id}}-{{accountGroup.wholesaler}}", "accounts" : ["{{accountGroup.accountIds}}"], "createAt" : {{accountGroup.dateFull}}, "deleted" : false, "updateAt" : {{accountGroup.dateFull}} }
+{%- endfor %}
